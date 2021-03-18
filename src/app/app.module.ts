@@ -5,12 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoaderComponent } from './loader/loader.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RepositoryChartComponent } from './repository-chart/repository-chart.component';
+import { RepositoryIssuesComponent } from './repository-issues/repository-issues.component';
+import { RepositorySearchComponent } from './repository-search/repository-search.component';
+import { ChartComponent } from './chart/chart.component';
+import { IssueListComponent } from './issue-list/issue-list.component';
+import { SearchListComponent } from './search-list/search-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoaderComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RepositoryChartComponent,
+    RepositoryIssuesComponent,
+    RepositorySearchComponent,
+    ChartComponent,
+    IssueListComponent,
+    SearchListComponent
   ],
   imports: [
     BrowserModule,
