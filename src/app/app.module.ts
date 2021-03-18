@@ -11,6 +11,7 @@ import { RepositorySearchComponent } from './repository-search/repository-search
 import { ChartComponent } from './chart/chart.component';
 import { IssueListComponent } from './issue-list/issue-list.component';
 import { SearchListComponent } from './search-list/search-list.component';
+import { SubHeaderComponent } from './sub-header/sub-header.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SearchListComponent } from './search-list/search-list.component';
     RepositorySearchComponent,
     ChartComponent,
     IssueListComponent,
-    SearchListComponent
+    SearchListComponent,
+    SubHeaderComponent
   ],
   imports: [
     BrowserModule,
