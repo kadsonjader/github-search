@@ -1,10 +1,11 @@
 <sub-header [subHeading]="subHeading"></sub-header>
 
 <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <input type="search" class="form-control" placeholder="enter repository name here..." [formControl]="searchControl" [value]="searchName">
-    </div>
-    <button type="submit" class="btn btn-primary">Search</button>
+  <mat-form-field class="example-full-width">
+      <input matInput type="search" class="form-control" placeholder="Digite o nome do Repositorio..." [formControl]="searchControl" [value]="searchName">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" type="submit" class="btn btn-primary">Search</button>
 </form>
 
 <repository-search-list [searchSubmitted]="searchSubmitted" [repositoryList]="repositoryList"></repository-search-list>

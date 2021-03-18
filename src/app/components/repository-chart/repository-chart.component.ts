@@ -2,8 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 
-import { GithubApiService } from '../../services/github-api/github-api.service';
-import { LoaderService } from '../../services/loader/loader-service';
+import { GithubApiService } from '../../service/github-api/github-api.service';
+import { LoaderService } from '../../service/loader/loader-service';
 
 @Component({
   selector: 'repository-chart',

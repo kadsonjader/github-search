@@ -1,14 +1,12 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 const SEARCH_ITEMS_PER_PAGE = 1000;
 const ISSUES_ITEMS_PER_PAGE = 100;
 
 @Injectable()
 export class GithubApiService {
-
-  baseURL = `${environment.base_url}`
   constructor(private _http: HttpClient) { }
 
   public searchRepositoriesByName(name: string): Observable<Object> {

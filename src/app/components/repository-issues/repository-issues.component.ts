@@ -2,9 +2,9 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 
-import { GithubApiService } from '../../services/github-api/github-api.service';
-import { LoaderService } from '../../services/loader/loader-service';
-import { Issue } from '../../models/issue';
+import { GithubApiService } from '../../service/github-api/github-api.service';
+import { LoaderService } from '../../service/loader/loader-service';
+import { Issue } from '../../model/issue';
 
 @Component({
   selector: 'repository-issues',

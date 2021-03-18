@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Repository } from '../../../models/repository';
+import { Repository } from '../../../model/repository';
 
 @Component({
   selector: 'chart-bar',
