@@ -10,7 +10,7 @@ import { LoaderService } from '../../service/loader/loader-service';
   templateUrl: './repository-chart.component.html',
 })
 export class RepositoryChartComponent implements OnInit, OnDestroy {
-  public subHeading = 'Repository chart of ';
+  public subHeading = 'Grafico do Repositorio ';
   public hasFetched = false;
   public repository = null;
   public error: string;
