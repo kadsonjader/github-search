@@ -1,6 +1,7 @@
 <div class="repository-items-list">
     <ul *ngIf="repositoryList.length > 0">
         <li *ngFor="let repository of repositoryList" class="list-group">
+          <mat-card>
             <div fxLayout="column" fxLayoutAlign="space-between" class="list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">{{ repository.name }}</h5>
@@ -15,8 +16,9 @@
                     <strong>Open issues:</strong> {{ repository.open_issues_count }}
                     <small *ngIf="repository.open_issues_count > 0">(click <a routerLink="/repository/issues/{{ repository.full_name }}">here</a> to check them out.)</small>
                 </p>
-                <p class="mb-1"><a routerLink="/repository/chart/{{ repository.full_name }}">Verique para o grafico do repositorio</a></p>
+                <p class="mb-1"><a routerLink="/repository/chart/{{ repository.full_name }}">Verficar o grafico do Repositorio</a></p>
             </div>
+          </mat-card>
         </li>
     </ul>
 </div>
