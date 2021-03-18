@@ -3,16 +3,16 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
-import { GithubApiService } from '../../services/github-api/github-api.service';
-import { LoaderService } from '../../services/loader/loader-service';
-import { RepositorySearchResult, Repository } from '../../models/repository';
+import { GithubApiService } from '../../service/github-api/github-api.service';
+import { LoaderService } from '../../service/loader/loader-service';
+import { RepositorySearchResult, Repository } from '../../model/repository';
 
 @Component({
   selector: 'repository-search',
   templateUrl: './repository-search.component.html',
 })
 export class RepositorySearchComponent implements OnInit, OnDestroy {
-  public subHeading = 'You can use this search form for searching among GitHub repositories.';
+  public subHeading = 'Pesquise os respositorios mais interessantes do GITHUB';
   public searchControl: FormControl = new FormControl();
   public repositoryList: Repository[] = [];
   public searchSubmitted = false;
@@ -62,7 +62,7 @@ export class RepositorySearchComponent implements OnInit, OnDestroy {
             this.repositoryList = items;
           } else {
             this.repositoryList = [];
-            this.error = 'Not found. Please try again or use a different name is the search input above.';
+            this.error = 'Sem resposta, tenta procurar com nome diferente';
           }
         },
         (err: HttpErrorResponse) => {

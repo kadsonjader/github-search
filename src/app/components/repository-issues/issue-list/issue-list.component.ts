@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { Issue } from '../../../models/issue';
+import { Issue } from '../../../model/issue';
 
 @Component({
   selector: 'repository-issue-list',

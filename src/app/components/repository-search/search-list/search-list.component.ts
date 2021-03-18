@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { Repository } from '../../../models/repository';
+import { Repository } from '../../../model/repository';
 
 @Component({
   selector: 'repository-search-list',
