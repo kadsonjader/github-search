@@ -14,7 +14,7 @@
                 <p class="mb-1"><strong>Watchers count:</strong> {{ repository.watchers_count }}</p>
                 <p class="mb-1">
                     <strong>Open issues:</strong> {{ repository.open_issues_count }}
-                    <small *ngIf="repository.open_issues_count > 0">(click <a routerLink="/repository/issues/{{ repository.full_name }}">here</a> to check them out.)</small>
+                    <small *ngIf="repository.open_issues_count > 0">(acesse <a routerLink="/repository/issues/{{ repository.full_name }}">aqui</a> para ver as issues.)</small>
                 </p>
                 <p class="mb-1"><a routerLink="/repository/chart/{{ repository.full_name }}">Verficar o grafico do Repositorio</a></p>
             </div>
