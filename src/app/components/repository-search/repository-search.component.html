@@ -1,0 +1,12 @@
+<h1>Explore Repositorios do GITHUB</h1>
+
+<mat-card><form (ngSubmit)="onSubmit()">
+  <mat-form-field class="example-full-width" style="margin-left:700px; width:400px !important">
+      <input matInput type="search" class="form-control" placeholder="Digite o nome do Repositorio..." [formControl]="searchControl" [value]="searchName">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" class="btn btn-primary" style="margin-left:15px; width: 100px;">Search</button>
+</form></mat-card>
+
+<repository-search-list [searchSubmitted]="searchSubmitted" [repositoryList]="repositoryList"></repository-search-list>
+
+<p *ngIf="error">{{ error }}. Por favor volte a  <a routerLink="/">pagina inicial</a> e tente novamente</p>
