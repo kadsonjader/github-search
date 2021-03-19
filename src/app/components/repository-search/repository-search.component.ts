@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 import { GithubApiService } from '../../service/github-api/github-api.service';
 import { LoaderService } from '../../service/loader/loader-service';
@@ -12,7 +13,7 @@ import { RepositorySearchResult, Repository } from '../../model/repository';
   templateUrl: './repository-search.component.html',
 })
 export class RepositorySearchComponent implements OnInit, OnDestroy {
-  public subHeading = 'Pesquise os respositorios mais interessantes do GITHUB';
+  public subHeading = 'Explore repositorios no GITHUB';
   public searchControl: FormControl = new FormControl();
   public repositoryList: Repository[] = [];
   public searchSubmitted = false;
@@ -24,7 +25,14 @@ export class RepositorySearchComponent implements OnInit, OnDestroy {
   constructor(
     private _githubApiService: GithubApiService,
     private _loaderService: LoaderService,
-    private _route: ActivatedRoute) { }
+    private _route: ActivatedRoute,
+    private _snackBar: MatSnackBar) { }
+
+    openSnackBar(message: string, action: string) {
+      this._snackBar.open(message, action, {
+        duration: 4000,
+      });
+    }
 
   ngOnInit() {
     this._subscription = this._route.params.subscribe(params => {
@@ -49,6 +57,7 @@ export class RepositorySearchComponent implements OnInit, OnDestroy {
     this._search();
   }
 
+
   private _search(): void {
     this._loaderService.setVisiblility(true);
     this._githubApiService.searchRepositoriesByName(this.searchName)
@@ -62,7 +71,7 @@ export class RepositorySearchComponent implements OnInit, OnDestroy {
             this.repositoryList = items;
           } else {
             this.repositoryList = [];
-            this.error = 'Sem resposta, tenta procurar com nome diferente';
+            this.openSnackBar('Sem Resultado, Tente pesquisar de outra forma', 'Fechar')
           }
         },
         (err: HttpErrorResponse) => {
