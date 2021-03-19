@@ -5,7 +5,7 @@
 
 ![N|Solid](https://img.shields.io/badge/Version-1.0-brightgreen) ![N|Solid](https://img.shields.io/badge/status-Finished-brightgreen)
 
-_Sistema de aplicativo movel de carona compartilhada_
+_Sistemas de busca de repositorios no github_
 
 ## Tecnologias Usadas
 Tecnologias usadas para a estrutura dessa parte do projeto
